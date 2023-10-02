@@ -1,0 +1,26 @@
+/* Set a light blue background color for the entire page */
+body {
+    background-color: #b3e0ff; /* You can adjust the color code as needed */
+}
+
+/* Center the content horizontally and vertically on the page */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+
+/* Add some spacing between rows */
+.row + .row {
+    margin-top: 10px;
+}
+
+/* Center content horizontally in each column */
+.column {
+    flex: 1;
+    text-align: center;
+}
