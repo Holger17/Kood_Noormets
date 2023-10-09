@@ -1,22 +1,33 @@
-/* Grid Container */
-.grid-container {
+body {
+    background-color: #e0e0e0;
+    margin: 0;
+    padding: 10px;
+}
+
+.container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 100%;
+    margin: 0;
 }
 
-/* Flex Container */
-.flex-container {
+.box {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    height: 60px;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
 }
 
-/* Common Styles for Grid and Flex Items */
-.grid-item, .flex-item {
-    background-color: #3498db;
-    color: white;
-    padding: 20px;
+.box:nth-child(odd) {
+    background-color: #d03434;
+    font-family: 'Monotype Corsiva', cursive;
+    font-size: 18px;
     text-align: center;
-    margin: 5px;
 }
