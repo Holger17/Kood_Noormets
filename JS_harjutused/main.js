@@ -45,7 +45,7 @@ function harjutus7() {
 }
 
 // Ülesanne 10
-let myNameComponents = ['Samuel', 'L', 'Jackson'];
+let myNameComponents = ['Samuel', 'M', 'Jaakson'];
 console.log("Minu nimi on " + myNameComponents.join(" ") + ".");
 
 // Ülesanne 11
@@ -75,10 +75,10 @@ function harjutus12() {
 
 // Ülesanne 13
 function harjutus13(massiiv) {
-    if (massiiv.includes("Marek")) {
-        console.log("Marek on massiivis");
+    if (massiiv.includes("Sven")) {
+        console.log("Sven on massiivis");
     } else {
-        console.log("Marek pole massiivis");
+        console.log("Sven pole massiivis");
     }
 }
 
@@ -92,18 +92,18 @@ let inimesed = [
         email: 'alice@eesti.ee'
     },
     {
-        nimi: 'Bob',
+        nimi: 'Maali',
         vanus: 32,
         aadress: 'Tänavaküla 12',
         telefon: '293463847',
-        email: 'bob@gmail.com'
+        email: 'Maali@gmail.com'
     },
     {
-        nimi: 'Marek',
+        nimi: 'Juhmard',
         vanus: 22,
         aadress: 'Metsatee 3',
         telefon: '8594032',
-        email: 'marek@example.com'
+        email: 'Juhmard@email.com'
     }
 ];
 
@@ -135,3 +135,16 @@ function harjutus14(inimesed) {
         console.log("E-post sisaldab sõna 'eesti': " + eestiEmail.nimi);
     }
 }
+
+// Kutsu kõik funktsioonid esile
+harjutus1("Pets");
+harjutus2("MG", "Infinity", "Lilla");
+console.log(harjutus3(10, 15));
+console.log(harjutus4("Juhan"));
+console.log(harjutus5("tere"));
+harjutus6();
+harjutus7();
+harjutus11([4, 5, 5, 3, 5, 1, 2, 4, 2]);
+harjutus12();
+harjutus13(["Juss", "Kalev", "Rögambert"]);
+harjutus14(inimesed);
