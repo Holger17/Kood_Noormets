@@ -2,17 +2,20 @@
 function harjutus1(nimi) {
     console.log("Tere, " + nimi + "!");
 }
+harjutus1("Pets");
 
 // Ülesanne 2
 function harjutus2(mark, mudel, värv) {
     console.log("Minu auto on " + värv + " " + mark + " " + mudel + ".");
 }
+harjutus2("MG", "Infinity", "Lilla");
 
 // Ülesanne 3
 function harjutus3(põhjaPindala, kõrgus) {
     let ruumala = (põhjaPindala * kõrgus) / 3;
     console.log("Püramiidi ruumala on " + ruumala + ".");
 }
+console.log(harjutus3(10, 15));
 
 // Ülesanne 4
 function harjutus4(nimi) {
@@ -22,11 +25,13 @@ function harjutus4(nimi) {
         return nimi;
     }
 }
+console.log(harjutus4("Juhan"));
 
 // Ülesanne 5
 function harjutus5(sõne) {
     return sõne.split('').reverse().join('');
 }
+console.log(harjutus5("tere"));
 
 // Ülesanne 6
 function harjutus6() {
@@ -34,6 +39,7 @@ function harjutus6() {
         console.log(i);
     }
 }
+harjutus6();
 
 // Ülesanne 7
 function harjutus7() {
@@ -43,6 +49,7 @@ function harjutus7() {
         i--;
     }
 }
+harjutus7();
 
 // Ülesanne 10
 let myNameComponents = ['Samuel', 'M', 'Jaakson'];
@@ -57,6 +64,8 @@ function harjutus11(hinded) {
     let keskmine = summa / hinded.length;
     console.log("Keskmine hinne on " + keskmine + ".");
 }
+harjutus11([4, 5, 5, 3, 5, 1, 2, 4, 2]);
+
 
 // Ülesanne 12
 function harjutus12() {
@@ -72,6 +81,8 @@ function harjutus12() {
         }
     }
 }
+harjutus12();
+
 
 // Ülesanne 13
 function harjutus13(massiiv) {
@@ -81,6 +92,8 @@ function harjutus13(massiiv) {
         console.log("Sven pole massiivis");
     }
 }
+harjutus13(["Juss", "Kalev", "Rögambert"]);
+
 
 // Ülesanne 14
 let inimesed = [
@@ -135,16 +148,4 @@ function harjutus14(inimesed) {
         console.log("E-post sisaldab sõna 'eesti': " + eestiEmail.nimi);
     }
 }
-
-// Kutsu kõik funktsioonid esile
-harjutus1("Pets");
-harjutus2("MG", "Infinity", "Lilla");
-console.log(harjutus3(10, 15));
-console.log(harjutus4("Juhan"));
-console.log(harjutus5("tere"));
-harjutus6();
-harjutus7();
-harjutus11([4, 5, 5, 3, 5, 1, 2, 4, 2]);
-harjutus12();
-harjutus13(["Juss", "Kalev", "Rögambert"]);
 harjutus14(inimesed);
