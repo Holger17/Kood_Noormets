@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Juhuslikud Kassipildid</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Juhuslik Kassipilt</h1>
+    <img id="catImage" src="" alt="Juhuslik kassipilt" width="500">
+    <button onclick="getCatImage()">Laadi uus pilt</button>
+
+    <script>
+        const catApiUrl = 'https://api.thecatapi.com/v1/images/search';
+
+        async function getCatImage() {
+            try {
+                const response = await fetch(catApiUrl);
+                const data = await response.json();
+                const catImage = document.getElementById('catImage');
+                catImage.src = data[0].url;
+            } catch (error) {
+                console.error('Kassipildi pärimisel tekkis viga:', error);
+            }
+        }
+
+        getCatImage();
+    </script>
+</body>
+</html>
