@@ -1,21 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles.css">
-  <title>Logi sisse</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logi sisse</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        h2 {
+            color: #000000;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1c1c1c;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #1c1c1c;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1c1c1c;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
 </head>
 <body>
-  <h1>Logi sisse</h1>
-  <form action="/login" method="post">
-    <label for="username">Kasutajanimi:</label>
-    <input type="text" id="username" name="username" required>
-    <br>
-    <label for="password">Salasõna:</label>
-    <input type="password" id="password" name="password" required>
-    <br>
-    <button type="submit">Logi sisse</button>
-  </form>
+    <header>
+        <h1>Picatsu Login</h1>
+        <nav>
+            <!-- Lisatud unikaalsed ID-d linkidele -->
+            <a id="contactLink" onclick="changePage('contact.html')">Kontakt</a>
+            <a id="homeLink" onclick="changePage('index.html')">Kodu</a>
+            <a id="profileLink" onclick="changePage('profile.html')">Profiil</a>
+            <a id="registerLink" onclick="changePage('register.html')">Registreerimine</a>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <h2>Logi sisse</h2>
+        <form id="loginForm">
+            <label for="username">Kasutajanimi:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Salasõna:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="button" onclick="submitForm()">Logi sisse</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2024 Picatsu Lõputöö
+    </footer>
+
+    <script>
+        // JavaScript funktsioon lehtede vahetamiseks
+        function changePage(page) {
+            window.location.href = page;
+        }
+
+        // JavaScript funktsioon sisselogimisvormi saatmiseks
+        function submitForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Simuleerime AJAX-päringut (saate seda hiljem asendada tegeliku päringuga)
+            setTimeout(function () {
+                alert('Sisselogitud!'); // Näide: võite siin muuta vormi saatmist serverile ja vastuse käitlemist
+                // Siin võiks lisada kasutaja nime salvestamise või muu vajaliku tegevuse.
+                document.getElementById('loginForm').reset(); // Tühjendame vormi väljad
+                window.location.href = 'profile.html'; // Suuname kasutaja profiilile
+            }, 500);
+        }
+    </script>
 </body>
 </html>

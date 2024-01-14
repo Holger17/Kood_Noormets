@@ -1,13 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles.css">
-  <title>Kontakt</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Picatsu</title>
+    <style>
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          margin: 20px;
+          background-color: #f4f4f4;
+          color: #333;
+      }
+
+      header {
+          text-align: center;
+          padding: 20px;
+          background-color: #1c1c1c;
+          color: #fff;
+      }
+
+      nav {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+      }
+
+      nav a {
+          margin: 0 15px;
+          text-decoration: none;
+          color: #fff;
+          font-weight: bold;
+          transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+          color: #ffcc00;
+      }
+
+      section {
+          max-width: 800px;
+          margin: auto;
+          line-height: 1.6;
+          padding: 20px;
+          background-color: #fff;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+          margin-top: 20px;
+      }
+
+      .contact-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 20px;
+      }
+
+      .map-container {
+          margin-top: 200px;
+          position: relative;
+          overflow: hidden;
+          border-radius: 8px;
+      }
+
+      .map {
+          width: 100%;
+          height: 300px;
+      }
+
+      .picatsu-contact-image {
+          max-width: 50%;
+          height: auto;
+          border-radius: 8px;
+          margin-top: 15px;
+      }
+
+      .hariduse3-contact-image {
+          max-width: 100%;
+          height: auto;
+          border-radius: 1px;
+          margin-top: -100px; /* Adjusted margin-top */
+      }
+
+      footer {
+          text-align: center;
+          padding: 10px;
+          background-color: #1c1c1c;
+          color: #fff;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+      }
+  </style>
 </head>
 <body>
-  <h1>Kontakt</h1>
-  <!-- Lisa siia kontaktinfo kuvamiseks vajalik HTML -->
+    <header>
+        <h1>Kontakteeru Picatsuga</h1>
+        <nav>
+            <a href="index.html">Kodu</a>
+            <a href="login.html">Login</a>
+            <a href="profile.html">Profiil</a>
+            <a href="register.html">Registreerimine</a>
+        </nav>
+    </header>
+    <section>
+        <div class="contact-info">
+            <div>
+                <h2>Picatsu Maja</h2>
+                <p>Hariduse 3 Keldris<br>Tallinn<br>Harjumaa</p>
+                <p>Phone: +372 69696969</p>
+            </div>
+            <img class="picatsu-contact-image" src="picatsu_contact.jpg" alt="Picatsu Contact Image">
+        </div>
+        <div class="map-container">
+            <div id="picatsuMap" class="map"></div>
+        </div>
+        <div class="contact-info">
+            <img class="hariduse3-contact-image" src="Hariduse3.png" alt="Hariduse3 Contact Image">
+        </div>
+    </section>
+    <footer>
+        &copy; 2024 Picatsu Lõputöö
+    </footer>
 </body>
 </html>

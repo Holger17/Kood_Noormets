@@ -1,30 +1,34 @@
 const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+
 const app = express();
+const port = 3000;
 
-const port = 3002;
-
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-	res.sendFile(__dirname + '/public/index.html');
-});
-
-app.get('/register', (req, res) => {
-	res.sendFile(__dirname + '/public/register.html');
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.get('/contact', (req, res) => {
-	res.sendFile(__dirname + '/public/contact.html');
+  res.sendFile(path.join(__dirname, 'public', 'contact.html'));
 });
 
 app.get('/login', (req, res) => {
-	res.sendFile(__dirname + '/public/login.html');
+  res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
 
 app.get('/profile', (req, res) => {
-	res.sendFile(__dirname + '/public/profile.html');
+  res.sendFile(path.join(__dirname, 'public', 'profile.html'));
+});
+
+app.get('/register', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'register.html'));
 });
 
 app.listen(port, () => {
-	console.log(`Server kuulab pordil ${port}. Külasta http://localhost:${port}`);
+  console.log(`Server töötab aadressil http://localhost:${port}`);
 });
