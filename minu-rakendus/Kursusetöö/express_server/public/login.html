@@ -88,66 +88,45 @@
             background-color: #333;
         }
 
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #1c1c1c;
-            color: #fff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
     </style>
 
 </head>
 <body>
-    <header>
-        <h1>Picatsu Login</h1>
-        <nav>
-            <!-- Lisatud unikaalsed ID-d linkidele -->
-            <a id="contactLink" onclick="changePage('contact.html')">Kontakt</a>
-            <a id="homeLink" onclick="changePage('index.html')">Kodu</a>
-            <a id="profileLink" onclick="changePage('profile.html')">Profiil</a>
-            <a id="registerLink" onclick="changePage('register.html')">Registreerimine</a>
-        </nav>
-    </header>
+    <h2>Registration</h2>
+    <form action="/register" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
 
-    <div class="login-container">
-        <h2>Logi sisse</h2>
-        <form id="loginForm">
-            <label for="username">Kasutajanimi:</label>
-            <input type="text" id="username" name="username" required>
-            <br>
-            <label for="password">Salasõna:</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <button type="button" onclick="submitForm()">Logi sisse</button>
-        </form>
-    </div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
 
-    <footer>
-        &copy; 2024 Picatsu Lõputöö
-    </footer>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br>
 
-    <script>
-        // JavaScript funktsioon lehtede vahetamiseks
-        function changePage(page) {
-            window.location.href = page;
-        }
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br>
 
-        // JavaScript funktsioon sisselogimisvormi saatmiseks
-        function submitForm() {
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required min="1"><br>
 
-            // Simuleerime AJAX-päringut (saate seda hiljem asendada tegeliku päringuga)
-            setTimeout(function () {
-                alert('Sisselogitud!'); // Näide: võite siin muuta vormi saatmist serverile ja vastuse käitlemist
-                // Siin võiks lisada kasutaja nime salvestamise või muu vajaliku tegevuse.
-                document.getElementById('loginForm').reset(); // Tühjendame vormi väljad
-                window.location.href = 'profile.html'; // Suuname kasutaja profiilile
-            }, 500);
-        }
-    </script>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <h2>Login</h2>
+    <form action="/login" method="post">
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" name="username" required><br>
+
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="password" required><br>
+
+        <button type="submit">Login</button>
+    </form>
 </body>
 </html>
